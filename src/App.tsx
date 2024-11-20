@@ -1,11 +1,11 @@
 import {HomePage} from "./routes/HomePage";
-
+import {ThemeProvider} from "../src/Context/ChangeTheme"
 
 function App() {
   return (
-  <div >
-    <HomePage/>
-  </div>
+      <ThemeProvider>
+        <HomePage/>
+      </ThemeProvider>
 
   );
 }
