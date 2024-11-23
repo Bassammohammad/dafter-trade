@@ -5,6 +5,7 @@ import App from './App';
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { LoginSignupPage } from "./routes/LoginSignupPage";
 import {Dashboard} from './routes/Dashboard';
+import {Calendar} from "./routes/Calendar";
 
 
 
@@ -12,8 +13,9 @@ import {Dashboard} from './routes/Dashboard';
 const router = createBrowserRouter([
     { path: '/', element: <App /> },
     { path: '/login', element: <LoginSignupPage /> },
-    { path: '/signup', element: <LoginSignupPage /> },
+
     {path: '/dashboard', element: <Dashboard /> },
+    {path: "/calendar", element: <Calendar /> },
 ]);
 
 

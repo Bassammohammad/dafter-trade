@@ -1,19 +1,27 @@
-interface Props {
+import { FieldError, UseFormRegister, FieldValues, RegisterOptions} from "react-hook-form";
+
+
+interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
+    type?:string;
     placeholder: string | undefined
-    onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
     name: string;
     className: string;
-    classDivInput: string;
 
+    register: UseFormRegister<any>;
 
+    validation: RegisterOptions
 }
 
-export function Input({placeholder, onChange, name, className, classDivInput}: Props) {
+export function Input({placeholder, name, className,  type, register, validation}: Props) {
 
     return (
-        <div className={`font-extralight ${classDivInput} `}  >
+            <input
+                {...register(name, validation)}
+                type={type}
+                className={className}
+                placeholder={placeholder}
+                name={name}
 
-            <input className={`bg-neutral-700 border-1 px-2 block ${className}`} placeholder={placeholder} onChange={onChange} name={name}  />
-        </div>
-    )
+            />
+      )
 }
