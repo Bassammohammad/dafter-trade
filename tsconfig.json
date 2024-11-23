@@ -1,0 +1,43 @@
+{
+  "compilerOptions": {
+    /* Basic Options */
+    "target": "es6",                          // Specify ECMAScript target version
+    "module": "esnext",                        // Specify module code generation
+    "lib": ["dom", "dom.iterable", "esnext"],  // Include library declarations (e.g., `esnext` for newer features)
+    "allowJs": true,                           // Allow JavaScript files to be part of the project
+    "checkJs": false,                          // Disable error checking for JavaScript files
+    "jsx": "react-jsx",                        // Use the new JSX transform (React 17+)
+    "sourceMap": true,                         // Generate corresponding `.map` files
+
+    /* Strict Type-Checking Options */
+    "strict": true,                            // Enable all strict type-checking options
+    "noImplicitAny": true,                     // Raise error on `any` type
+    "strictNullChecks": true,                  // Enable strict null checks
+    "strictFunctionTypes": true,               // Enable strict checking of function types
+    "strictBindCallApply": true,               // Enable strict `bind`, `call`, and `apply` methods
+    "strictPropertyInitialization": true,      // Check for class properties initialization
+    "noImplicitThis": true,                    // Raise error on `this` with an implicit `any` type
+    "useUnknownInCatchVariables": true,        // Catch clause variables default to `unknown` instead of `any`
+
+    /* Module Resolution Options */
+    "moduleResolution": "node",                // Resolve modules in Node.js style
+    "esModuleInterop": true,                   // Enables `import`/`export` compatibility
+    "allowSyntheticDefaultImports": true,      // Allow default imports from modules with no default export
+    "resolveJsonModule": true,                 // Allows importing `.json` files
+
+    /* React Options */
+    "isolatedModules": true,                   // Ensures that each file can be safely transpiled without relying on other imports
+    "noEmit": true,                            // Prevents emitting output files; useful for codebases using bundlers like Webpack or Vite
+
+    /* Other Useful Options */
+    "skipLibCheck": true,                      // Skip type checking of all declaration files (faster builds)
+    "forceConsistentCasingInFileNames": true,  // Disallow inconsistently-cased references to files
+    "baseUrl": "./",                           // Base directory to resolve non-relative module names
+    "paths": {                                 // Custom path mappings (optional)
+      "@components/*": ["src/components/*"],
+    }
+  },
+
+  "include": ["src", "src/cssModule.d.ts"],// Include all files in the `src` directory
+  "exclude": ["node_modules", "build"]         // Exclude `node_modules` and the build output directory
+}
